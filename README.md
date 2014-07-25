@@ -1,6 +1,6 @@
 **SYNOPSIS**
 
-App template for gn, the file generator.
+Cuba application template for gn, the file generator.
 
 **DESCRIPTION**
 
