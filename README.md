@@ -1,22 +1,22 @@
-SYNOPSIS
+##SYNOPSIS
 
-    App template for gn, the file generator.
+App template for gn, the file generator.
 
-DESCRIPTION
+##DESCRIPTION
 
-    This template generates a very basic Cuba application layout. It's
-    a starting point with a minimal set of dependencies. Make sure to
-    read the information provided both in the plan and when running
-    the generator.
+This template generates a very basic Cuba application layout. It's
+a starting point with a minimal set of dependencies. Make sure to
+read the information provided both in the plan and when running
+the generator.
 
-INSTALLATION
+##INSTALLATION
 
     $ gn -i https://github.com/agpelliza/cuba_app
 
-USAGE
+##USAGE
 
-    $ gn app
+    $ gn cuba_app
 
-SEE ALSO
+##SEE ALSO
 
-    http://lucasefe.github.com/gn/
+http://github.com/lucasefe/gn
