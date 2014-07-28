@@ -1,0 +1,4 @@
+<header>
+  <h1>{{ name }}</h1>
+  <p>{{ name }} application based on the Cuba microframework.</p>
+</header>

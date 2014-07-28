@@ -1,5 +1,6 @@
 require "digest/sha1"
 require "base64"
+require "date"
 
 module Plan
   class App
@@ -40,27 +41,69 @@ module Plan
     end
   end
 
+  class Gitignore < App
+    def destination
+      "#{name}/.gitignore"
+    end
+  end
+
   class Config < App
     def destination
       "#{name}/config.ru"
     end
   end
 
-  class Css < App
-    def destination
-      "#{name}/public/css/styles.css"
+  module Public
+    class Css < App
+      def destination
+        "#{name}/public/css/styles.css"
+      end
     end
   end
 
-  class Home < App
-    def destination
-      "#{name}/views/home.mote"
+  module Views
+    class Layout < App
+      def destination
+        "#{name}/views/layout.mote"
+      end
+    end
+
+    class Header < App
+      def destination
+        "#{name}/views/header.mote"
+      end
+    end
+
+    class Footer < App
+      def destination
+        "#{name}/views/footer.mote"
+      end
+    end
+
+    class Home < App
+      def destination
+        "#{name}/views/home.mote"
+      end
     end
   end
 
-  class Layout < App
-    def destination
-      "#{name}/views/layout.mote"
+  module Models
+  end
+
+  module Routes
+  end
+
+  module Helpers
+  end
+
+  module Filters
+  end
+
+  module Tests
+    class Helper < App
+      def destination
+        "#{name}/tests/helper.mote"
+      end
     end
   end
 end

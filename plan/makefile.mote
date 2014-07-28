@@ -1,3 +1,5 @@
+.PHONY: test
+
 gems:
 	which gs  || gem install gs
 	which dep || gem install dep
@@ -7,4 +9,28 @@ gems:
 	gs init
 
 install:
-	dep install
+  dep install -f .gems
+  dep install -f .gems.dev
+
+setup:
+  echo APP_KEY=$$(basename $$(pwd)) > .env
+  echo APP_SECRET=$$(make secret --no-print-directory | grep -v 'ruby') >> .env
+  echo DATABASE_URL=sqlite:$$(pwd)/data.db >> .env
+
+console:
+  env $$(cat .env) irb -r ./app
+
+secret:
+  ruby -r securerandom -e 'puts SecureRandom.hex(32)'
+
+server:
+  env $$(cat .env) shotgun -o 0.0.0.0
+
+test:
+  env $$(cat .env) cutest test/**/*_test.rb
+
+pull:
+  git pull origin master
+
+push:
+  git push origin master
