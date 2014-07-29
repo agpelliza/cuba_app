@@ -31,7 +31,7 @@ module Plan
 
   class Readme < App
     def destination
-      "#{name}/README"
+      "#{name}/README.md"
     end
   end
 
@@ -62,6 +62,12 @@ module Plan
   end
 
   module Views
+    class Readme < App
+      def destination
+        "#{name}/README.md"
+      end
+    end
+
     class Layout < App
       def destination
         "#{name}/views/layout.mote"
@@ -74,32 +80,58 @@ module Plan
       end
     end
 
-    class Footer < App
-      def destination
-        "#{name}/views/footer.mote"
-      end
-    end
-
     class Home < App
       def destination
         "#{name}/views/home.mote"
       end
     end
+
+    class Footer < App
+      def destination
+        "#{name}/views/footer.mote"
+      end
+    end
   end
 
   module Models
+    class Readme < App
+      def destination
+        "#{name}/README.md"
+      end
+    end
   end
 
   module Routes
+    class Readme < App
+      def destination
+        "#{name}/README.md"
+      end
+    end
   end
 
   module Helpers
+    class Readme < App
+      def destination
+        "#{name}/README.md"
+      end
+    end
   end
 
   module Filters
+    class Readme < App
+      def destination
+        "#{name}/README.md"
+      end
+    end
   end
 
   module Tests
+    class Readme < App
+      def destination
+        "#{name}/README.md"
+      end
+    end
+
     class Helper < App
       def destination
         "#{name}/tests/helper.mote"
@@ -113,7 +145,7 @@ You have just created a Cuba application. Now, go ahead and install
 the dependencies with the following commands:
 
 $ cd #{Plan::App.new.name}
-$ make # Creates a gemset and lists dependencies.
+$ make gems # Creates a gemset and lists dependencies.
 $ make install # Installs dependencies
 
 Once you are done with the setup, run the webserver:
