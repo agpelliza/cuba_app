@@ -64,7 +64,7 @@ module Plan
   module Views
     class Readme < App
       def destination
-        "#{name}/README.md"
+        "#{name}/views/README.md"
       end
     end
 
@@ -96,7 +96,7 @@ module Plan
   module Models
     class Readme < App
       def destination
-        "#{name}/README.md"
+        "#{name}/models/README.md"
       end
     end
   end
@@ -104,7 +104,7 @@ module Plan
   module Routes
     class Readme < App
       def destination
-        "#{name}/README.md"
+        "#{name}/routes/README.md"
       end
     end
   end
@@ -112,7 +112,7 @@ module Plan
   module Helpers
     class Readme < App
       def destination
-        "#{name}/README.md"
+        "#{name}/helpers/README.md"
       end
     end
   end
@@ -120,7 +120,7 @@ module Plan
   module Filters
     class Readme < App
       def destination
-        "#{name}/README.md"
+        "#{name}/filters/README.md"
       end
     end
   end
@@ -128,7 +128,7 @@ module Plan
   module Tests
     class Readme < App
       def destination
-        "#{name}/README.md"
+        "#{name}/tests/README.md"
       end
     end
 
