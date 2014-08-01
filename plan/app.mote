@@ -2,6 +2,12 @@
 require "{{ gem.sub("-", "/") }}"
 % end
 
+APP_KEY = ENV.fetch("APP_KEY")
+APP_SECRET = ENV.fetch("APP_SECRET")
+DATABASE_URL = ENV.fetch("DATABASE_URL")
+
+DB = Sequel.connect(DATABASE_URL)
+
 % if gems.include? "mote"
   % if gems.include? "cuba-contrib"
 Cuba.plugin Cuba::Mote
@@ -14,6 +20,20 @@ Cuba.plugin Mote::Helpers
 Cuba.plugin Shield::Helpers
 % end
 
+Cuba.use Rack::MethodOverride
+Cuba.use Rack::Session::Cookie,
+  key: "{{name}}",
+  secret: "{{Digest::SHA1.hexdigest(name + Time.now.to_f.to_s)}}"
+
+Cuba.use Rack::Static,
+  urls: %w[/js /css /img],
+  root: "./public"
+
+% if gems.include? "rack-protection"
+Cuba.use Rack::Protection
+Cuba.use Rack::Protection::RemoteReferrer
+% end
+
 # Require all application files.
 Dir["./models/**/*.rb"].each  { |rb| require rb }
 Dir["./routes/**/*.rb"].each  { |rb| require rb }
@@ -21,20 +41,6 @@ Dir["./routes/**/*.rb"].each  { |rb| require rb }
 # Require all helper files.
 Dir["./helpers/**/*.rb"].each { |rb| require rb }
 Dir["./filters/**/*.rb"].each { |rb| require rb }
-
-Cuba.use Rack::MethodOverride
-Cuba.use Rack::Session::Cookie,
-  key: "{{name}}",
-  secret: "{{Digest::SHA1.hexdigest(name + Time.now.to_f.to_s)}}"
-
-% if gems.include? "rack-protection"
-Cuba.use Rack::Protection
-Cuba.use Rack::Protection::RemoteReferrer
-% end
-
-Cuba.use Rack::Static,
-  urls: %w[/js /css /img],
-  root: "./public"
 
 Cuba.define do
 % if gems.include? "shield"

@@ -20,7 +20,9 @@ module Plan
         "mote", # Required, but you can change it later.
         "cuba-contrib", # Optional, provides some nice helpers.
         "rack-protection", # Optional, but recommended.
-        "shield" # Optional, helpers for authentication.
+        "shield", # Optional, helpers for authentication.
+        "sqlite3", # Required, but you can change it later.
+        "sequel" # Required, but you can change it later.
       ]
     end
 

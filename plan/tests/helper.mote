@@ -3,5 +3,5 @@ require_relative "../app"
 require "cuba/test"
 
 prepare do
-  
+  DB = Sequel.connect(DATABASE_URL)
 end
