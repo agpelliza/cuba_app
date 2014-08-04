@@ -1,4 +1,5 @@
 {{ name }}
 {{ "=" * name.size }}
 
-This is a Cuba application.
+**You have just created {{ name }}, a Cuba application.**
+

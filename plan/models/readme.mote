@@ -1,4 +1,3 @@
-{{ name }}
-{{ "=" * name.size }}
+Models
+------
 
-This is a Cuba application.

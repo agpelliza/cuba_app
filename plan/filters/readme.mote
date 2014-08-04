@@ -1,4 +1,3 @@
-{{ name }}
-{{ "=" * name.size }}
+Filters
+-------
 
-This is a Cuba application.
