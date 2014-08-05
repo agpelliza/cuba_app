@@ -1,3 +1,27 @@
 Models
 ------
 
+The *models* are the entities involved in your business domain.
+Them should hold most of your business logic and will usually be mapped to a persistent layer.
+For this tamplate we are using Sequel as an ORM, so your models will inherit from Sequel::Model (it can be changed).
+
+**Example**
+
+    # models/user.rb
+    class User < Sequel::Model
+      # ...your business logic
+    end
+
+At this template we are also including [Shield](https://github.com/cyx/shield) for authentication.
+If you are not familiar with *Shield* you should take a look at the link above.
+For the particular case of *User* are simple implementation will look like in the example.
+
+**Example**
+
+    # models/user.rb
+    class User < Sequel::Model
+      def self.fetch(identifier)
+        filter(email: identifier).first || filter(username: identifier).first
+      end
+    end
+
