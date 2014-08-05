@@ -1,3 +1,21 @@
 Helpers
 -------
 
+The *helpers* ususally are modules that hold functionality cross to the whole application.
+Helpers are plugged-in to Cuba app and are globally accessible.
+
+**Example**
+
+    # ./app.rb
+    # ...some of your code
+    Cuba.plugin UserHelpers
+    # ...more of your code
+
+
+    # helpers/user_helper.rb
+    module UserHelpers
+      def current_user
+        authenticated(User)
+      end
+    end
+
