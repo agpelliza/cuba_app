@@ -1,3 +1,30 @@
 Routes
 ------
 
+At the *routes* directory you will hold each of your application's main modules.
+Each *route* will hold the module's routes mapping.
+Usually, this routes will be different Cuba apps mounted on the main app.
+
+
+**Example**
+
+    # ./app.rb
+    # ... your app.rb code here
+    Cuba.define do
+
+      on default do
+        run User
+      end
+    end
+
+
+    # routes/users.rb
+    class Users < Cuba
+      define do
+        
+        on default do
+          res.write "I'm at the user app"
+        end
+      end
+    end
+
