@@ -26,6 +26,8 @@ The target for this template is people aiming for a starting point, as is usuall
 
     $ gn cuba_app
 
+NOTE: Current [gn](http://github.com/lucasefe/gn) version doesn't work for this template, for now this [fork](https://github.com/agpelliza/gn) is required.
+
 **SEE ALSO**
 
 http://github.com/lucasefe/gn
