@@ -1,3 +1,37 @@
 Views
 -----
 
+The *views* are your presentation layer. Here is what users will see.
+For this template we are using [Mote](https://github.com/soveran/mote), a minimal template engine.
+
+**Example**
+
+    # ./app.rb
+    # ...your code
+      on root do
+        res.write mote("views/layout.mote", content: mote("views/home.mote"))
+      end
+    # ...more of your code
+
+    # views/layout.mote
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" type="text/css">
+      <link href="/css/styles.css" rel="stylesheet" type="text/css">
+      <title>Cuba App</title>
+    </head>
+      <body>
+        {{ params[:content] }}
+      </body>
+    </html>
+
+
+    # views/home.mote
+    <p>
+      Congratulations! You have just created a Cuba app.<br> The text you
+      are reading is located at <code>./views/home.mote</code>.<br> Make
+      sure you change it to something more interesting.
+    </p>
+
