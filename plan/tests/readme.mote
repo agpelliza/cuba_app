@@ -1,3 +1,19 @@
 Tests
 -----
 
+The *tests* directory holds tests for the application.
+Here we propose to use [Cutest](https://github.com/djanowski/cutest), but you can change it for any other you prefer.
+
+**Example**
+
+    # tests/
+    # ...your code
+    scope do
+      test "should display homepage" do
+        get "/"
+
+        assert_equal 200, last_response.status
+      end
+    end
+    # ...more tests
+
