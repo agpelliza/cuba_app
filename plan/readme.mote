@@ -3,5 +3,12 @@
 
 **You have just created {{ name }}, a Cuba application.**
 
-If you are new to Cuba I suggest you to start with a light reading at [The Guide to Cuba](http://theguidetocuba.io/). Also you should check the oficial [Cuba]() site and the [Readme](https://github.com/soveran/cuba) at the Github repository.
+If you are new to Cuba I suggest you to start with a light reading at [The Guide to Cuba](http://theguidetocuba.io/). Also you should check the oficial [Cuba](http://cuba.is) site and the [Readme](https://github.com/soveran/cuba) at the Github repository.
+
+The technological stack also includes:
+
+- [Mote](https://github.com/soveran/mote), a minimal templating engine.
+- [Shield](https://github.com/cyx/shield), a simple authentication library.
+- [Sequel](https://github.com/jeremyevans/sequel), a flexible data base toolkit.
+- [SQLite3](https://github.com/sparklemotion/sqlite3-ruby), an sqlite3 ruby interface.
 
