@@ -1,8 +1,8 @@
 Filters
 -------
 
-*Filters* are validations we want to make before triggering any business logic, like frontend validations.
-A posible frontend filter is one attached to models. [Scrivener](https://github.com/soveran/scrivener) is one simple solution for this (you will need to add this gem to your set).
+*Filters* are validations we want to make before triggering any business logic, like front-end validations.
+A possible front-end filter is one attached to models. [Scrivener](https://github.com/soveran/scrivener) is one simple solution for this (you will need to add this gem to your set).
 
 **Example**
 

@@ -1,7 +1,7 @@
 Helpers
 -------
 
-The *helpers* ususally are modules that hold functionality cross to the whole application.
+The *helpers* usually are modules that hold functionality cross to the whole application.
 Helpers are plugged-in to Cuba app and are globally accessible.
 
 **Example**

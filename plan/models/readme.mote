@@ -3,7 +3,7 @@ Models
 
 The *models* are the entities involved in your business domain.
 Them should hold most of your business logic and will usually be mapped to a persistent layer.
-For this tamplate we are using Sequel as an ORM, so your models will inherit from Sequel::Model (it can be changed).
+For this template we are using Sequel as an ORM, so your models will inherit from Sequel::Model (it can be changed).
 
 **Example**
 

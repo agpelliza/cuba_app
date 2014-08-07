@@ -8,7 +8,7 @@ This template generates a very basic Cuba application layout based on @soveran's
 It's a starting point with a minimal set of dependencies. However, it makes the following decisions:
 
 - Provides a defined set of directories (each has it's own README.md explaining it's porpose and providing examples)
-- Provides a SQL management (if you are not intending to use SQL as persistence layer, you should change it by your self)
+- Provides a SQL management (if you are not intending to use SQL as persistence layer, you should change it by yourself)
 - Provides [Mote](https://github.com/soveran/mote) as the template engine (it can be changed later)
 - Sticks with conventional CSS for styling (any additional tool could be added)
 
