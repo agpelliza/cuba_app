@@ -39,5 +39,5 @@ section p code {
   font-family: "Ubuntu Mono", monospace;
   font-size: 90%;
   padding: 2px 4px;
-  color: #c33;
+  color: #4d4d4d;
 }
