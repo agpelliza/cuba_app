@@ -13,13 +13,11 @@
   <title>{{ name }}</title>
 </head>
   <body>
-  
     % header = "{{ this.partial('header') }}"
     % content = "{{ params[:content] }}"
     % footer = "{{ this.partial('footer') }}"
     {{ header }}
     {{ content }}
     {{ footer }}
-
   </body>
 </html>

@@ -6,6 +6,9 @@ gems:
 % gems.each do |gem|
 	dep add {{gem}}
 % end
+% gems_dev.each do |gem|
+	dep add {{gem}} -f .gems.dev
+% end
 	gs init
 
 install:
