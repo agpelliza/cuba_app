@@ -12,3 +12,4 @@ The technological stack also includes:
 - [Sequel](https://github.com/jeremyevans/sequel), a flexible data base toolkit.
 - [SQLite3](https://github.com/sparklemotion/sqlite3-ruby), an sqlite3 ruby interface.
 
+NOTE: To use SQLite3 you will need to install it along with the development package, i.e In Debian based Linux would be <code>sudo apt-get install libsqlite3-dev</code>.
