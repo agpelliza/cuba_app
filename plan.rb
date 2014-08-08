@@ -155,19 +155,19 @@ module Plan
 end
 
 instructions = <<-EOS
-You have just created a Cuba application. Now, go ahead and install
-the dependencies with the following commands:
+  You have just created a Cuba application. Now, go ahead and install
+  the dependencies with the following commands:
 
-$ cd #{Plan::App.new.name}
-$ make gems # Creates a gemset and lists dependencies.
-$ make install # Installs dependencies.
-$ make setup # Create basic configurations for your app.
+    $ cd #{Plan::App.new.name}
+    $ make gems # Creates a gemset and lists dependencies.
+    $ make install # Installs dependencies.
+    $ make setup # Create basic configurations for your app.
 
-Once you are done with the setup, run the webserver:
+  Once you are done with the setup, run the webserver:
 
-$ make server
+    $ make server
 
-Now you can head to http://localhost:9393.
+  Now you can head to http://localhost:9393.
 EOS
 
 puts instructions
