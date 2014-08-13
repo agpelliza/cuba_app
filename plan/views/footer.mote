@@ -1,7 +1,7 @@
 <footer>
   <hr/>
   <p>
-    {{ #{name} #{Date.today.year} }}
+    {{ "#{name} #{Date.today.year}" }}
   </p>
 </footer>
 
