@@ -1,3 +1,4 @@
+# encoding: utf-8
 % gems.each do |gem|
 require "{{ gem.sub("-", "/") }}"
 % end

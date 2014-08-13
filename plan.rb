@@ -1,3 +1,4 @@
+# encoding: utf-8
 require "digest/sha1"
 require "base64"
 require "date"
@@ -148,7 +149,7 @@ module Plan
 
     class Helper < App
       def destination
-        "#{name}/tests/helper.mote"
+        "#{name}/tests/helper.rb"
       end
     end
   end
